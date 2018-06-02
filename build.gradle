@@ -1,0 +1,64 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    ext.versions = [
+            kotlin          : '1.2.41',
+            gradlePlugin    : "3.2.0-alpha16",
+
+            compileSdk      : 27,
+            minSdk          : 21,
+            targetSdk       : 27,
+
+            junit           : '4.12',
+            testRunner      : '1.0.2',
+            espresso        : '3.0.2',
+
+            supportLibrary  : "27.1.1",
+            constraintLayout: "1.1.0",
+    ]
+
+    ext.deps = [
+            plugin    : [
+                    gradle: "com.android.tools.build:gradle:${versions.gradlePlugin}",
+                    kotlin: "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
+            ],
+
+            junit     : "junit:junit:${versions.junit}",
+            testRunner: "com.android.support.test:runner:${versions.testRunner}",
+            espresso  : "com.android.support.test.espresso:espresso-core:${versions.espresso}",
+
+            kotlin    : [
+                    stdlib: "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${versions.kotlin}",
+            ],
+
+            android   : [
+                    appCompatV7     : "com.android.support:appcompat-v7:${versions.supportLibrary}",
+                    constraintLayout: "com.android.support.constraint:constraint-layout:${versions.constraintLayout}",
+            ]
+    ]
+
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath deps.plugin.gradle
+        classpath deps.plugin.kotlin
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

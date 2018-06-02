@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AutoLayout</string>
+    <string name="activity_layout_auto_inject">Activity自动注入布局</string>
+    <string name="activity_layout_manual_inject">Activity手动注入布局</string>
+    <string name="fragment_layout_inject_by_autolayoutfragment">通过内置AutoLayoutFragment实现Fragment布局自动注入</string>
+    <string name="fragment_layout_inject_by_autolayoutbasefragment">自定义AutoLayoutBaseFragment实现Fragment布局自动注入</string>
+    <string name="fragment_layout_manual_inject">Fragment手动注入布局</string>
+</resources>
