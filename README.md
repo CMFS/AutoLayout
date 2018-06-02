@@ -58,6 +58,7 @@ class AutoLayoutExampleFragment3 : Fragment() {
 ```
 或
 ```kotlin
+@AutoLayout(R.layout.fragment_auto_layout4)
 class AutoLayoutExampleFragment4 : Fragment() {
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
