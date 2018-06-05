@@ -1,6 +1,6 @@
 # AutoLayout
 
-利用运行时注解为`Activity`和`Fragent`注入布局。
+利用运行时注解为`Activity`和`Fragment`注入布局。
 
 ## Activity
 
